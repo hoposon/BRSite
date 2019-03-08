@@ -1,0 +1,28 @@
+{
+  "name": "br",
+  "version": "1.0.0",
+  "description": "This is br website",
+  "main": "index.html",
+  "scripts": {
+    "start": "run-p gulp lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "lite": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
