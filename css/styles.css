@@ -7026,89 +7026,91 @@ body {
   body button:focus {
     outline: none; }
 
-nav.navbar-main .navbar-nav .nav-item {
-  font-size: 1.3rem; }
-  nav.navbar-main .navbar-nav .nav-item a.nav-link {
-    color: white; }
-  nav.navbar-main .navbar-nav .nav-item a.nav-link.active {
-    color: white;
-    text-decoration: overline; }
-  nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
-    color: white;
-    text-decoration: underline; }
-
-nav.navbar-light button.navbar-toggler {
+nav.navbar-main button.navbar-toggler {
   color: white;
   border: none;
   text-decoration: overline; }
 
+nav.navbar-main.bg {
+  background-color: #D9291F; }
+  @media (min-width: 768px) {
+    nav.navbar-main.bg {
+      background-color: unset; } }
+
+nav.navbar-main.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear; }
+  @media (min-width: 768px) {
+    nav.navbar-main.fade-in {
+      transition: unset; } }
+
+nav.navbar-main.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear; }
+  @media (min-width: 768px) {
+    nav.navbar-main.fade-out {
+      visibility: visible;
+      opacity: 1;
+      transition: unset; } }
+
+nav.navbar-main.bg-nav {
+  background-color: #D9291F; }
+
+nav.navbar-main .navbar-nav .nav-item {
+  font-size: 1.3rem; }
+  nav.navbar-main .navbar-nav .nav-item a.nav-link {
+    color: white; }
+    nav.navbar-main .navbar-nav .nav-item a.nav-link.active {
+      text-decoration: overline; }
+    nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
+      text-decoration: underline;
+      background-color: #b21e16; }
+      @media (min-width: 768px) {
+        nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
+          background-color: unset; } }
+
+.collection-heading h1 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 900; }
+  @media (min-width: 992px) {
+    .collection-heading h1 {
+      font-size: 4.3rem; } }
+
+.collection-heading a {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900; }
+  @media (min-width: 992px) {
+    .collection-heading a {
+      font-size: 2.3rem; } }
+
 .home {
-  background-image: url("../images/melody-jacob-1400392-unsplash.jpg");
+  background-attachment: fixed;
+  background-image: url("../images/juno-jo-1321059-unsplash.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  font-size: 4.3rem;
+  font-size: 2.3rem;
   font-weight: 900; }
+  @media (min-width: 992px) {
+    .home {
+      font-size: 4.3rem; } }
   .home .home-brand {
-    background-color: #A99D01;
+    background-color: #EFFF41;
     height: 30%; }
 
-@media (min-width: 768px) {
-  .home {
-    font-size: 10rem; } }
+.brand {
+  font-size: 1.3rem; }
+  .brand .brand-pic {
+    background-image: url("../images/half-pic.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
 
 .bg-1 {
   background-color: #3291D1; }
-
-@media (min-width: 768px) {
-  /* show 3 items */
-  .carousel-inner .active,
-  .carousel-inner .active + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-    display: block; }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-    transition: none; }
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
-    position: relative;
-    transform: translate3d(0, 0, 0); }
-  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -25%;
-    z-index: -1;
-    display: block;
-    visibility: visible; }
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible; }
-  /* farthest right hidden item must be abso position for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    visibility: visible; }
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible; } }

@@ -13,28 +13,31 @@ let images = {
 }
 
 const picNumforPixels = {
-	'576': {
+	'0': {
 		limits: [0,576],
 		picNum: 1
 	},
-	'768': {
+	'576': {
 		limits: [577,768],
+		picNum: 1
+	},
+	'768': {
+		limits: [769,992],
 		picNum: 2
 	},
 	'992': {
-		limits: [769,992],
-		picNum: 3
+		limits: [993, 1199],
+		picNum: 2
 	},
 	'1200': {
-		limits: [993, 20000],
+		limits: [1200, 20000],
 		picNum: 3
 	},
 	picNum: 1
 }
 
 let createCarousels = function() {
-	// console.log()
-	// let carousels = document.querySelectorAll('.carousel');
+
 	let carousels = document.getElementsByClassName('carousel');
 	let intViewportWidth = window.innerWidth;
 
@@ -44,22 +47,17 @@ let createCarousels = function() {
 			break;
 		}
 	}
-	// for (let obj in picNumforPixels) {
-	// 	if (intViewportWidth >= obj.limits[0] && intViewportWidth < obj.limits[1]) {
-	// 		picNumforPixels.picNum = obj.picNum;
-	// 		break;
-	// 	}
-	// }
-
 
 	for (let i = 0; i < carousels.length; i++) {
 		let li = [];
 		let rows_num = Math.ceil(images['coll_'+i].length/picNumforPixels.picNum);
 		let items = []
 		let rows = [];
-		// console.log()
+
 		let carInd = carousels[i].childNodes[1];
+		carInd.innerHTML = '';
 		let carInner = carousels[i].childNodes[3];
+		carInner.innerHTML = '';
 		for (let k = 0; k < picNumforPixels.picNum; k++) {
 			// li[k] = document.createElement('li', {'data-target' : '#', 'data-slide-to' : k, class: k===0 ? 'active' : ''});
 			li[k] = document.createElement('li');
@@ -94,5 +92,3 @@ let createCarousels = function() {
 		}
 	}
 }
-
-createCarousels();
