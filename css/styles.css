@@ -7032,7 +7032,7 @@ nav.navbar-main button.navbar-toggler {
   text-decoration: overline; }
 
 nav.navbar-main.bg {
-  background-color: #D9291F; }
+  background-color: #EFFF41; }
   @media (min-width: 768px) {
     nav.navbar-main.bg {
       background-color: unset; } }
@@ -7055,9 +7055,6 @@ nav.navbar-main.fade-out {
       opacity: 1;
       transition: unset; } }
 
-nav.navbar-main.bg-nav {
-  background-color: #D9291F; }
-
 nav.navbar-main .navbar-nav .nav-item {
   font-size: 1.3rem; }
   nav.navbar-main .navbar-nav .nav-item a.nav-link {
@@ -7066,7 +7063,7 @@ nav.navbar-main .navbar-nav .nav-item {
       text-decoration: overline; }
     nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
       text-decoration: underline;
-      background-color: #b21e16; }
+      background-color: #2276ae; }
       @media (min-width: 768px) {
         nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
           background-color: unset; } }
@@ -7081,11 +7078,10 @@ nav.navbar-main .navbar-nav .nav-item {
 
 .collection-heading a {
   color: white;
-  font-size: 1.3rem;
   font-weight: 900; }
   @media (min-width: 992px) {
     .collection-heading a {
-      font-size: 2.3rem; } }
+      font-size: 1.3rem; } }
 
 .home {
   background-attachment: fixed;
@@ -7100,7 +7096,7 @@ nav.navbar-main .navbar-nav .nav-item {
     .home {
       font-size: 4.3rem; } }
   .home .home-brand {
-    background-color: #EFFF41;
+    background-color: #D9161A;
     height: 30%; }
 
 .brand {
@@ -7111,6 +7107,13 @@ nav.navbar-main .navbar-nav .nav-item {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; }
+
+.founder .founder-pic {
+  background-image: url("../images/wahyu-priantara-1389163-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .bg-1 {
   background-color: #3291D1; }

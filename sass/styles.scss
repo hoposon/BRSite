@@ -40,7 +40,7 @@ nav.navbar-main {
 		}
 	}
 	&.bg-nav {
-		background-color: $color2-w-opacity;
+		// background-color: $color2-w-opacity;
 	}
 	.navbar-nav {
 		.nav-item {
@@ -68,24 +68,23 @@ nav.navbar-main {
 		color: $color-white;
 		font-size: $f-size-much-bigger;
 		font-weight: $f-weight-max;
-		// text-shadow: 4px 4px #000000;
 		@media (min-width: 992px) {
 			font-size: $f-size-much-more-bigger;
 		}
 	}
 	a {
 		color: $color-white;
-		font-size: $f-size-bigger;
+		// font-size: $f-size-bigger;
 		font-weight: $f-weight-max;
 		@media (min-width: 992px) {
-			font-size: $f-size-much-bigger;
+			// font-size: $f-size-much-bigger;
+			font-size: $f-size-bigger;
 		}
 	}
 }
 
 .home {
 	background-attachment: fixed;
-	// background-image: url('../images/home.jpg');
 	background-image: url('../images/juno-jo-1321059-unsplash.jpg');
 	background-position: center;
 	background-size: cover;
@@ -93,7 +92,6 @@ nav.navbar-main {
 	color: $color-white;
 	font-size: $f-size-much-bigger;
 	font-weight: $f-weight-max;
-	// text-shadow: 4px 4px #000000;
 	@media (min-width: 992px) {
 		font-size: $f-size-much-more-bigger;
 	}
@@ -101,7 +99,6 @@ nav.navbar-main {
 		background-color: $color1;
 		// mix-blend-mode: multiply;
 		height: 30%;
-		// opacity: 0.9;
 	}
 }
 
@@ -114,7 +111,16 @@ nav.navbar-main {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}
-	
+}
+
+.founder {
+	.founder-pic {
+		background-image: url('../images/wahyu-priantara-1389163-unsplash.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
 }
 
 .bg-1 {
