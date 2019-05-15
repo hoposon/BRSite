@@ -1,0 +1,108 @@
+@import './base.scss';
+
+// font
+$font-family: 'Oswald', sans-serif;
+
+// font sizes
+$size-xxxl: 30px;
+$size-xxl: 20px;
+$size-xl: 20px;
+$size-l: 20px;
+$size-m: 18px;
+$size-s: 16px;
+$size-xs: 12px;
+$size-xxs: 10px;
+$size-xxxs: 10px;
+@media (min-width: 768px) {
+	$size-xxxl: 100px;
+	$size-xxl: 95px;
+	$size-xl: 60px;
+	$size-l: 50px;
+	$size-m: 45px;
+	$size-s: 35px;
+	$size-xs: 30px;
+	$size-xxs: 25px;
+	$size-xxxs: 20px;
+}
+
+// font weight
+$f-extra-light: 200;
+$f-light: 300;
+$f-regular: 400;
+$f-medium: 500;
+$f-semi-bold: 600;
+$f-bold: 700;
+
+body {
+	font-family: $font-family;
+	color: $color-d-shade;
+}
+
+.navigation {
+	font-family: $font-family;
+	font-size: $size-m;
+	font-weight: $f-light;
+}
+
+.small-heading {
+	font-size: $size-l;
+	font-weight: $f-light;
+	color: $color-main;
+}
+
+.small-text {
+	font-size: $size-xs;
+	font-weight: $f-extra-light;
+}
+
+.small-text-readm {
+	font-size: $size-m;
+	font-weight: $f-light;	
+}
+
+%big-heading {
+	font-size: $size-xxxl;
+	font-weight: $f-light;
+}
+.big-heading {
+	@extend %big-heading;
+}
+
+%big-text {
+	font-size: $size-xl;
+	font-weight: $f-light;
+}
+.big-text {
+	@extend %big-text;
+}
+
+.event-heading {
+	font-size: $size-xxl;
+	font-weight: $f-semi-bold;
+}
+
+.event-text {
+	font-size: $size-xs;
+	font-weight: $f-regular;
+}
+
+.event-text {
+	font-size: $size-xs;
+	font-weight: $f-regular;
+}
+
+.collections-heading {
+	@extend %big-heading;
+	color: $color-add;
+}
+
+.collections-text {
+	@extend %big-text;
+	color: $color-add;
+}
+
+.collections-links {
+	font-size: $size-l;
+	font-weight: $f-light;
+	color: $color-main;
+}

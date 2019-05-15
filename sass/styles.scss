@@ -1,128 +1,51 @@
-@import './base/base';
+// @import './base/base.scss';
+@import './base/fonts.scss';
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-body {
-	z-index: 0;
-	position: relative;
-	button:focus {
-		outline: none;
-	}
-}
 
-nav.navbar-main {
-	button.navbar-toggler {
-		color: $color-white;
-		border: none;
-		text-decoration: overline;
-	}
-	&.bg {
-		background-color: $color2;
+nav {
+	&.navbar.navigation {
+		padding-top: 30px;
 		@media (min-width: 768px) {
-			background-color: unset;
+			padding-top: 50px;
 		}
-	}
-	&.fade-in {
-		visibility: visible;
-		opacity: 1;
-		transition: opacity 0.3s linear;
-		@media (min-width: 768px) {
-			transition: unset;
+
+		.navbar-brand {
+			background-image: url('../images//menu//svg/Logo-betta.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 100px;
+			height: 50px;
+			@media (min-width: 768px) {
+				width: 200px;
+				height: 100px;
+			}
 		}
-	}
-	&.fade-out {
-		visibility: hidden;
-		opacity: 0;
-		transition: visibility 0s 0.3s, opacity 0.3s linear;
-		@media (min-width: 768px) {
-			visibility: visible;
-			opacity: 1;
-			transition: unset;
+		button.navbar-toggler {
+			text-decoration: underline;
+			&:focus {
+				outline: none;
+			}
 		}
-	}
-	&.bg-nav {
-		// background-color: $color2-w-opacity;
-	}
-	.navbar-nav {
-		.nav-item {
-			font-size: $f-size-bigger;
-			a.nav-link {
-				color: $color-white;
-				&.active {
-					text-decoration: overline;
+
+		#navbarNav {
+			&.uncollapsed {
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $color-black;
+				padding-top: 80px;
+				padding-bottom: 50px;
+				div.nav-item {
+					border-bottom: 1px solid $color-white;
 				}
-				&:hover {
-					text-decoration: underline;
-					background-color: $color2-darker;
-					@media (min-width: 768px) {
-						background-color: unset;
-					}
+				a {
+					color: $color-white;
 				}
 			}
-			
 		}
+		
 	}
-}
-
-.collection-heading {
-	h1 {
-		color: $color-white;
-		font-size: $f-size-much-bigger;
-		font-weight: $f-weight-max;
-		@media (min-width: 992px) {
-			font-size: $f-size-much-more-bigger;
-		}
-	}
-	a {
-		color: $color-white;
-		// font-size: $f-size-bigger;
-		font-weight: $f-weight-max;
-		@media (min-width: 992px) {
-			// font-size: $f-size-much-bigger;
-			font-size: $f-size-bigger;
-		}
-	}
-}
-
-.home {
-	background-attachment: fixed;
-	background-image: url('../images/juno-jo-1321059-unsplash.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: $color-white;
-	font-size: $f-size-much-bigger;
-	font-weight: $f-weight-max;
-	@media (min-width: 992px) {
-		font-size: $f-size-much-more-bigger;
-	}
-	.home-brand {
-		background-color: $color1;
-		// mix-blend-mode: multiply;
-		height: 30%;
-	}
-}
-
-.brand {
-	font-size: $f-size-bigger;
-	.brand-pic {
-		background-image: url('../images/half-pic.png');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-}
-
-.founder {
-	.founder-pic {
-		background-image: url('../images/wahyu-priantara-1389163-unsplash.jpg');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-}
-
-.bg-1 {
-	background-color: #3291D1;
+	
 }

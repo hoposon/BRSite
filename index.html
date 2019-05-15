@@ -5,273 +5,80 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
     <title>BR Website</title>
 </head>
 
-<body data-spy="scroll" data-target="#navbar-main" data-offset="200">
+<body>
 
-	<div class="row fixed-top">
-		<nav id="navbar-main" class="navbar navbar-main navbar-expand-md bg-nav container-fluid">
-			<!-- <a class="navbar-brand col-2 offset-1 d-sm-none" href="#home" alt="logo"><span></span></a> -->
-			<button class="navbar-toggler col-2 offset-5 mt-2" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-				Menu
-			</button>
-			<div id="navbarContent" class="collapse navbar-collapse justify-content-center mb-3 mb-md-0">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="#home" alt="home">Domu</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0 font-weight-bold" href="#collections" alt="collections">Kolekce</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="#brand" alt="brand">Znacka</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="#founder" alt="founder">Zakladatelka</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="#actualities" alt="actualities">Aktuality</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="#boutique" alt="boutique">Nas Butik</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0 font-weight-bold" href="#eventsCalendar" alt="eventsCalendar">Kalendar Akci</a>
-					</li>
-					<li class="nav-item d-md-none">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-					</li>
-					<li class="nav-item d-md-none">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="http://www.facebook.com/profile.php?id="><i class="fa fa-instagram fa-lg"></i></a>
-					</li>
-					<li class="nav-item d-md-none">
-						<a class="nav-link pl-3 pt-2 pb-3 pl-md-0" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
-					</li>
-				</ul>
+	<div class='container-fluid'>
+		<div id="home" class="row">
+			<div class="col-12">
+				<nav class="navbar navigation row justify-content-start">
+					<div class="col-5 offset-1 col-sm-5 offset-sm-1">
+						<a class="navbar-brand" href="#home"></a>
+					</div>
+					<div class="col-5 col-sm-5 d-flex justify-content-end">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class='navigation'>Menu</span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse col-12 navigation" id="navbarNav">
+						<div class="navbar-nav">
+							<div class="row justify-content-center">
+								<div class="nav-item active col-auto">
+									<a class="nav-link" href="#home">Home</a>
+								</div>
+								<div class="nav-item col-auto">
+									<a class="nav-link" href="#">News</a>
+								</div>
+								<div class="nav-item col-auto">
+									<a class="nav-link" href="#">Collections</a>
+								</div>
+								<div class="nav-item col-auto">
+									<a class="nav-link" href="#">Events</a>
+								</div>
+								<div class="nav-item col-auto">
+									<a class="nav-link" href="#">Boutique</a>
+								</div>
+								<div class="nav-item col-auto">
+									<a class="nav-link" href="#">Contacts</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
 			</div>
-		</nav>
-	</div>
-
-	<div class="container-fluid">
-		<div class="row home min-vh-100 vh-100 align-items-end pt-5" id="home" name="home">
-			<div class="row home-brand col-12 align-items-center justify-content-center no-gutters">
-				<!-- <a class="bg-brand d-none d-sm-block col-2" href="#home" alt="logo"><span></span></a> -->
-				BETTA REJSKA
-			</div>
-		</div>
-		<div class="row min-vh-100 vh-100 bg-1 align-items-center" id="collections" name="collections">
-			<div class="collection-heading row col-12 align-items-center">
-				<div class="col-3 offset-3 text-left">
-					<h1>Tykwe 2019</h1>
-				</div>
-				<div class="col-3 text-right">
-					<a href="#collection-2018">Kolekce - Papralota 2018</a>
-				</div>				
-			</div>
-			<div id="carouselCollections_0" class="carousel slide w-100 h-75" data-ride="carousel">
-				<ol class="carousel-indicators">
-				</ol>
-				<div class="carousel-inner w-100 h-100 d-flex align-items-center px-4">
-				</div>
-				<a class="carousel-control-prev" href="#carouselCollections_0" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselCollections_0" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-		<div class="row brand min-vh-100 bg-1 align-items-stretch" id="brand" name="brand">
-			<div class="col-sm-6 px-5 py-5 d-flex flex-column justify-content-center">
-				<h2 class="pb-3">Znacka Betta Rejska</h2>
-				<p class="pb-3 text-justify">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Mauris tincidunt sem sed arcu. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Etiam posuere lacus quis dolor. Maecenas sollicitudin. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-				</p>
-				<p class="pb-3 text-justify">
-					Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. In dapibus augue non sapien. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Aliquam erat volutpat. Etiam quis quam. Phasellus faucibus molestie nisl. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Etiam quis quam. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Quisque porta. Fusce nibh.
-				</p>
-			</div>
-			<div class="brand-pic d-none d-sm-block col-sm-6 my-5" ></div>
-		</div>
-		<div class="row min-vh-100 vh-100 bg-1 align-items-center" id="collection-2018" name="collection-2018">
-			<div class="collection-heading row col-12 align-items-center">
-				<div class="col-3 offset-1 text-left">
-					<a href="#collections">Kolekce - Tykwe 2019</a>
-				</div>
-				<div class="col-4 text-center">
-					<h1>Papralota 2018</h1>
-				</div>
-				<div class="col-3 text-right">
-					<a href="#collection-2017">Kolekce - Bogota 2017</a>
-				</div>				
-			</div>
-			<div id="carouselCollections_1" class="carousel slide w-100 h-75" data-ride="carousel">
-				<ol class="carousel-indicators">
-				</ol>
-				<div class="carousel-inner w-100 h-100 d-flex align-items-center px-4">
-				</div>
-				<a class="carousel-control-prev" href="#carouselCollections_1" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselCollections_1" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-		<div class="row founder min-vh-100 align-items-stretch" id="founder" name="founder">
-			<div class="founder-pic d-none d-sm-block col-sm-6 my-5"></div>
-			<div class="col-sm-6 px-5 py-5 d-flex flex-column justify-content-center">
-				<h2 class="pb-3">Zakladatelka</h2>
-				<p class="pb-3 text-justify">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Mauris tincidunt sem sed arcu. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Etiam posuere lacus quis dolor. Maecenas sollicitudin. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-				</p>
-				<p class="pb-3 text-justify">
-					Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. In dapibus augue non sapien. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Aliquam erat volutpat. Etiam quis quam. Phasellus faucibus molestie nisl. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Etiam quis quam. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Quisque porta. Fusce nibh.
-				</p>
-					Etiam egestas wisi a erat. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Aliquam erat volutpat. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Etiam.
-				<p class="pb-3 text-justify">
-					Nunc tincidunt ante vitae massa. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nulla non lectus sed.
-				</p>
-				<p class="pb-3 text-justify">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam ni.
-				</p>
-			</div>
-		</div>
-		<div class="row min-vh-100 vh-100 align-items-center" id="collection-2017" name="collection-2017">
-			<div class="collection-heading row col-12 align-items-center">
-				<div class="col-3 offset-1 text-left">
-					<a href="#collection-2018">Kolekce - Papralota 2018</a>
-				</div>
-				<div class="col-4 text-center">
-					<h1>Bogota 2017</h1>
-				</div>
-				<div class="col-3 text-right">
-					<a href="#collection-2016">Kolekce - No Name 2016</a>
-				</div>				
-			</div>
-			<div id="carouselCollections_2" class="carousel slide w-100 h-75" data-ride="carousel">
-				<ol class="carousel-indicators">
-				</ol>
-				<div class="carousel-inner w-100 h-100 d-flex align-items-center px-4">
-				</div>
-				<a class="carousel-control-prev" href="#carouselCollections_2" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselCollections_2" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-		<div class="row min-vh-100" id="actualities" name="actualities">
-				
-		</div>
-		<div class="row min-vh-100" id="boutique" name="boutique">
-				
-		</div>
-		<div class="row min-vh-100" id="eventsCalendar" name="eventsCalendar">
-				
 		</div>
 	</div>
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-
-			</div>
-			<div class="row">
-				<div class="col col-sm-6"></div>
-				<div class="col col-sm-6">We are using <a href="https://fontawesome.com/license">Font Awesome</a></div>				
-			</div>
-		</div>
-	</footer>
 	
 	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="/js/carousel.js"></script>
+
+
+
 	<script>
-
-		// Calculate carousels on page load
-		createCarousels();
-		// triggers Carousels resize on window size change
-		$( window ).resize(function() {
-			createCarousels();
-		})
-
-		// // adds background color to mobile menu on uncollapse
-		// $('#navbar-main').on('show.bs.collapse', function () {
-		// 	$('#navbar-main').addClass('bg');
-		// })
-		// $('#navbar-main').on('hidden.bs.collapse', function () {
-		// 	console.log('removing class');
-		// 	$('#navbar-main').removeClass('bg');
-		// })
-
-		// hides/shows mobile menu on scroll up/down
-		$(function () {
-			var lastScrollTop = 0;
-			var $navbar = $('#navbar-main');
-
-			$(window).scroll(function(event){
-				var st = $(this).scrollTop();
-				if (st > lastScrollTop) { // scroll down
-				// use this is jQuery full is used
-				// $navbar.fadeOut();
-				// use this to use CSS3 animation
-				$navbar.addClass("fade-out");
-				$navbar.removeClass("fade-in");
-				
-				// use this if no effect is required
-				// $navbar.hide();
-				} else { // scroll up
-				// use this is jQuery full is used
-				// $navbar.fadeIn();
-				// use this to use CSS3 animation
-				$navbar.addClass("fade-in");
-				$navbar.removeClass("fade-out");
-				
-				// use this if no effect is required
-				// $navbar.show();
-				}
-				lastScrollTop = st;
-			});
+		$('.navbar').on('show.bs.collapse', function () {
+			$('#navbarNav').addClass('uncollapsed');
+			// $('.navbar-brand').addClass('uncollapsed');
+			// $('.navbar-toggler').addClass('uncollapsed');
+		});
+		// $('.navbar').on('hide.bs.collapse', function () {
+		// 	$('.navbar-brand').removeClass('uncollapsed');
+		// });
+		// $('.navbar').on('hidden.bs.collapse', function () {
+		// 	$('.navbar').removeClass('uncollapsed');
+		// 	$('.navbar-toggler').removeClass('uncollapsed');
+		// });
+		$('.navbar').on('hidden.bs.collapse', function () {
+			$('#navbarNav').removeClass('uncollapsed');
 		});
 		
-		
-		// let navScrolled = false; // just to prevenet setting the class all the time
-		// let navScrolledHalf = false;
-		// function lightenNavbarOnScroll() {
-		// 	const position = document.querySelector('.first-container').getBoundingClientRect().top;
-		// 	if (position < 155 && !navScrolledHalf) {
-		// 		document.querySelector('nav').classList.add('scrolled-half');
-		// 		document.querySelector('nav').classList.remove('unscrolled');
-		// 		navScrolledHalf = true;
-		// 	} else if (position < 50 && !navScrolled) {
-		// 		document.querySelector('nav').classList.add('scrolled-full');
-		// 		document.querySelector('nav').classList.remove('scrolled-half');
-		// 		navScrolled = true;
-		// 	} else if (position > 50 && navScrolled) {
-		// 		document.querySelector('nav').classList.add('scrolled-half');
-		// 		document.querySelector('nav').classList.remove('scrolled-full');				
-		// 		navScrolled = false;
-		// 	} else if (position > 155 && navScrolledHalf) {
-		// 		document.querySelector('nav').classList.add('unscrolled');
-		// 		document.querySelector('nav').classList.remove('scrolled-half');
-		// 		navScrolledHalf = false;
-		// 	}
-		// }
-		// $(window).on("scroll", lightenNavbarOnScroll);
-
 	</script>
 </body>
 

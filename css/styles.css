@@ -1,3 +1,56 @@
+body {
+  font-family: "Oswald", sans-serif;
+  color: #46333B; }
+
+.navigation {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 300; }
+
+.small-heading {
+  font-size: 20px;
+  font-weight: 300;
+  color: #9A1750; }
+
+.small-text {
+  font-size: 12px;
+  font-weight: 200; }
+
+.small-text-readm {
+  font-size: 18px;
+  font-weight: 300; }
+
+.big-heading, .collections-heading {
+  font-size: 30px;
+  font-weight: 300; }
+
+.big-text, .collections-text {
+  font-size: 20px;
+  font-weight: 300; }
+
+.event-heading {
+  font-size: 20px;
+  font-weight: 600; }
+
+.event-text {
+  font-size: 12px;
+  font-weight: 400; }
+
+.event-text {
+  font-size: 12px;
+  font-weight: 400; }
+
+.collections-heading {
+  color: #EE4C7C; }
+
+.collections-text {
+  color: #EE4C7C; }
+
+.collections-links {
+  font-size: 20px;
+  font-weight: 300;
+  color: #9A1750; }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7020,100 +7073,34 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-body {
-  z-index: 0;
-  position: relative; }
-  body button:focus {
-    outline: none; }
-
-nav.navbar-main button.navbar-toggler {
-  color: white;
-  border: none;
-  text-decoration: overline; }
-
-nav.navbar-main.bg {
-  background-color: #EFFF41; }
+nav.navbar.navigation {
+  padding-top: 30px; }
   @media (min-width: 768px) {
-    nav.navbar-main.bg {
-      background-color: unset; } }
-
-nav.navbar-main.fade-in {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s linear; }
-  @media (min-width: 768px) {
-    nav.navbar-main.fade-in {
-      transition: unset; } }
-
-nav.navbar-main.fade-out {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.3s, opacity 0.3s linear; }
-  @media (min-width: 768px) {
-    nav.navbar-main.fade-out {
-      visibility: visible;
-      opacity: 1;
-      transition: unset; } }
-
-nav.navbar-main .navbar-nav .nav-item {
-  font-size: 1.3rem; }
-  nav.navbar-main .navbar-nav .nav-item a.nav-link {
-    color: white; }
-    nav.navbar-main .navbar-nav .nav-item a.nav-link.active {
-      text-decoration: overline; }
-    nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
-      text-decoration: underline;
-      background-color: #2276ae; }
-      @media (min-width: 768px) {
-        nav.navbar-main .navbar-nav .nav-item a.nav-link:hover {
-          background-color: unset; } }
-
-.collection-heading h1 {
-  color: white;
-  font-size: 2.3rem;
-  font-weight: 900; }
-  @media (min-width: 992px) {
-    .collection-heading h1 {
-      font-size: 4.3rem; } }
-
-.collection-heading a {
-  color: white;
-  font-weight: 900; }
-  @media (min-width: 992px) {
-    .collection-heading a {
-      font-size: 1.3rem; } }
-
-.home {
-  background-attachment: fixed;
-  background-image: url("../images/juno-jo-1321059-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  font-size: 2.3rem;
-  font-weight: 900; }
-  @media (min-width: 992px) {
-    .home {
-      font-size: 4.3rem; } }
-  .home .home-brand {
-    background-color: #D9161A;
-    height: 30%; }
-
-.brand {
-  font-size: 1.3rem; }
-  .brand .brand-pic {
-    background-image: url("../images/half-pic.png");
+    nav.navbar.navigation {
+      padding-top: 50px; } }
+  nav.navbar.navigation .navbar-brand {
+    background-image: url("../images//menu//svg/Logo-betta.svg");
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; }
-
-.founder .founder-pic {
-  background-image: url("../images/wahyu-priantara-1389163-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
-
-.bg-1 {
-  background-color: #3291D1; }
+    background-size: contain;
+    width: 100px;
+    height: 50px; }
+    @media (min-width: 768px) {
+      nav.navbar.navigation .navbar-brand {
+        width: 200px;
+        height: 100px; } }
+  nav.navbar.navigation button.navbar-toggler {
+    text-decoration: underline; }
+    nav.navbar.navigation button.navbar-toggler:focus {
+      outline: none; }
+  nav.navbar.navigation #navbarNav.uncollapsed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    padding-top: 80px;
+    padding-bottom: 50px; }
+    nav.navbar.navigation #navbarNav.uncollapsed div.nav-item {
+      border-bottom: 1px solid #ffffff; }
+    nav.navbar.navigation #navbarNav.uncollapsed a {
+      color: #ffffff; }
