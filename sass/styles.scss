@@ -3,49 +3,58 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
-nav {
-	&.navbar.navigation {
+.nav-bar {
+	&.navigation {
 		padding-top: 30px;
 		@media (min-width: 768px) {
 			padding-top: 50px;
 		}
-
-		.navbar-brand {
-			background-image: url('../images//menu//svg/Logo-betta.svg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 100px;
-			height: 50px;
-			@media (min-width: 768px) {
-				width: 200px;
-				height: 100px;
-			}
-		}
-		button.navbar-toggler {
-			text-decoration: underline;
-			&:focus {
-				outline: none;
-			}
-		}
-
-		#navbarNav {
-			&.uncollapsed {
-				position: absolute;
-				left: 0;
-				top: 0;
-				background-color: $color-black;
-				padding-top: 80px;
-				padding-bottom: 50px;
-				div.nav-item {
-					border-bottom: 1px solid $color-white;
-				}
-				a {
-					color: $color-white;
-				}
-			}
-		}
-		
 	}
-	
+	.navbar-logo {
+		display: block;
+		background-image: url('../images//menu//svg/Logo-betta.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 100px;
+		height: 50px;
+		@media (min-width: 768px) {
+			width: 200px;
+			height: 100px;
+		}
+	}
+	.navbar-show.navigation {
+		display: inline;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+.nav-bar-items {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: $color-black;
+
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: height 1s, opacity 1s, visibility 1s; /* For Safari 3.1 to 6.0 */
+		transition: height 1s, opacity 1s, visibility 1s;
+		
+	a {
+		color: $color-white;
+	}
+
+	.main-menu-items {
+		div {
+			border-bottom: 1px solid $color-white;
+		}
+	}		
+
+	&.uncollapsed {
+		height: 380px;
+		opacity: 1;
+		visibility: visible;
+	}	
 }

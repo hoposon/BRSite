@@ -7,6 +7,11 @@ body {
   font-size: 18px;
   font-weight: 300; }
 
+.navigation-small {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 300; }
+
 .small-heading {
   font-size: 20px;
   font-weight: 300;
@@ -7073,34 +7078,46 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-nav.navbar.navigation {
+.nav-bar.navigation {
   padding-top: 30px; }
   @media (min-width: 768px) {
-    nav.navbar.navigation {
+    .nav-bar.navigation {
       padding-top: 50px; } }
-  nav.navbar.navigation .navbar-brand {
-    background-image: url("../images//menu//svg/Logo-betta.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 50px; }
-    @media (min-width: 768px) {
-      nav.navbar.navigation .navbar-brand {
-        width: 200px;
-        height: 100px; } }
-  nav.navbar.navigation button.navbar-toggler {
-    text-decoration: underline; }
-    nav.navbar.navigation button.navbar-toggler:focus {
-      outline: none; }
-  nav.navbar.navigation #navbarNav.uncollapsed {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #000000;
-    padding-top: 80px;
-    padding-bottom: 50px; }
-    nav.navbar.navigation #navbarNav.uncollapsed div.nav-item {
-      border-bottom: 1px solid #ffffff; }
-    nav.navbar.navigation #navbarNav.uncollapsed a {
-      color: #ffffff; }
+
+.nav-bar .navbar-logo {
+  display: block;
+  background-image: url("../images//menu//svg/Logo-betta.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 50px; }
+  @media (min-width: 768px) {
+    .nav-bar .navbar-logo {
+      width: 200px;
+      height: 100px; } }
+
+.nav-bar .navbar-show.navigation {
+  display: inline;
+  text-decoration: underline;
+  cursor: pointer; }
+
+.nav-bar-items {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000000;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: height 1s, opacity 1s, visibility 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: height 1s, opacity 1s, visibility 1s; }
+  .nav-bar-items a {
+    color: #ffffff; }
+  .nav-bar-items .main-menu-items div {
+    border-bottom: 1px solid #ffffff; }
+  .nav-bar-items.uncollapsed {
+    height: 380px;
+    opacity: 1;
+    visibility: visible; }
