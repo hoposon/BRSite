@@ -2,6 +2,39 @@
 @import './base/fonts.scss';
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+
+// }
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+
+// }
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+
+// }
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+
+// }
+
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.navigation-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
 
 .nav-bar {
 	&.navigation {
@@ -12,7 +45,7 @@
 	}
 	.navbar-logo {
 		display: block;
-		background-image: url('../images//menu//svg/Logo-betta.svg');
+		background-image: url('../images/menu/svg/Logo-betta.svg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -40,21 +73,87 @@
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transition: height 1s, opacity 1s, visibility 1s; /* For Safari 3.1 to 6.0 */
-		transition: height 1s, opacity 1s, visibility 1s;
+	transition: height 1s, opacity 1s, visibility 1s;
 		
 	a {
 		color: $color-white;
+		&:hover {
+			color: $color-add;
+		}
+	}	
+
+	&.uncollapsed {
+		height: 550px;
+		opacity: 1;
+		visibility: visible;
+		@media(min-width: 768px) {
+			height: 380px;
+		}		
 	}
 
 	.main-menu-items {
-		div {
-			border-bottom: 1px solid $color-white;
+		border-bottom: 1px solid $color-white;
+		margin: 0 20px;
+		@media(min-width: 768px) {
+			margin: 0;
 		}
-	}		
+	}
 
-	&.uncollapsed {
-		height: 380px;
-		opacity: 1;
-		visibility: visible;
+	.small-menu-items {
+		div {
+			margin-left: 35px;
+			@media(min-width: 768px) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.navbar-hide {
+		a {
+			display: block;
+			background-image: url('../images/menu/svg/x.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 20px;
+			height: 20px;
+
+			color: $color-white;
+			&:hover {
+				color: $color-add;
+			}
+
+			margin-left: 20px;
+			@media(min-width: 768px) {
+				margin-left: 0;
+			}
+		}
 	}	
+}
+
+.home {
+	min-height: 150vh;
+	background-image: url('../images/home/sm/motoki-tonn.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// Small devices (landscape phones, 576px and up)
+	@include media-breakpoint-up(sm) {
+		background-image: url('../images/home/sm/motoki-tonn.jpg');
+	}
+	// Medium devices (tablets, 768px and up)
+	@include media-breakpoint-up(md) {
+		background-image: url('../images/home/md/motoki-tonn.jpg');
+	}
+	// Large devices (desktops, 992px and up)
+	@include media-breakpoint-up(lg) {
+		background-image: url('../images/home/lg/motoki-tonn.jpg');
+	}
+	// Extra large devices (large desktops, 1200px and up)
+	@include media-breakpoint-up(xl) {
+		background-image: url('../images/home/xl/motoki-tonn.jpg');
+	}
+	@media (min-width: 1920px) {
+		background-image: url('../images/home/xxl/motoki-tonn.jpg');
+	}
 }

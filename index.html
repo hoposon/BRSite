@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> -->
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
@@ -15,7 +15,7 @@
 <body>
 
 	<div class='container-fluid'>
-		<div id="home" class="row">
+		<div id="navigation-bar" class="navigation-bar row">
 			<div class="col-12">
 				<div class="nav-bar row justify-content-start navigation">
 					<div class="col-5 offset-1 col-sm-5 offset-sm-1">
@@ -28,47 +28,55 @@
 			</div>
 			<div class="nav-bar-items col-12 d-flex align-items-center justify-content-center">
 				<div>
-				<div class="main-menu-items row justify-content-center">
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#home">Home</a>
+					<div class="main-menu-items row justify-content-center pb-3">
+						<div class="col-10 col-md-2 navigation">
+							<a class="nav-link" href="#home">Home</a>
+						</div>
+						<div class="navbar-hide col-2 d-md-none align-self-center navigation">
+							<a class="nav-link" href="#"></a>
+						</div>
+						<div class="col-12 col-md-2 navigation">
+							<a class="nav-link" href="#">News</a>
+						</div>
+						<div class="col-12 col-md-2 navigation">
+							<a class="nav-link" href="#">Collections</a>
+						</div>
+						<div class="col-12 col-md-2 navigation">
+							<a class="nav-link" href="#">Events</a>
+						</div>
+						<div class="col-12 col-md-2 navigation">
+							<a class="nav-link" href="#">Boutique</a>
+						</div>
+						<div class="col-12 col-md-2 navigation">
+							<a class="nav-link" href="#">Contacts</a>
+						</div>
 					</div>
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#">News</a>
+					<div class="row small-menu-items pt-3">
+						<div class="col-12 navigation-small">
+							<a class="nav-link" href="#home">Home</a>
+						</div>
+						<div class="col-12 navigation-small">
+							<a class="nav-link" href="#">News</a>
+						</div>
+						<div class="col-12 navigation-small">
+							<a class="nav-link" href="#">Collections</a>
+						</div>
 					</div>
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#">Collections</a>
+					<div class="row small-menu-items">
+						<div class="col-12 navigation">
+							<a class="nav-link" href="#home">Home</a>
+						</div>
+						<div class="col-12 col-md-11 navigation">
+							<a class="nav-link" href="#">News</a>
+						</div>
+						<div class="navbar-hide d-none d-md-block col-md-1 align-self-center navigation">
+							<a class="nav-link" href="#"></a>
+						</div>
 					</div>
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#">Events</a>
-					</div>
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#">Boutique</a>
-					</div>
-					<div class="col-auto navigation">
-						<a class="nav-link" href="#">Contacts</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 navigation-small">
-						<a class="nav-link" href="#home">Home</a>
-					</div>
-					<div class="col-12 navigation-small">
-						<a class="nav-link" href="#">News</a>
-					</div>
-					<div class="col-12 navigation-small">
-						<a class="nav-link" href="#">Collections</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 navigation">
-						<a class="nav-link" href="#home">Home</a>
-					</div>
-					<div class="col-12 navigation">
-						<a class="nav-link" href="#">News</a>
-					</div>
-				</div>
 				</div>
 			</div> <!-- nav-bar-items -->
+		</div> <!-- navigation-bar -->
+		<div id="home" class="home row">
 		</div>
 	</div>
 	
@@ -82,23 +90,10 @@
 	<script>
 		$('.navbar-show').on('click', function() {
 			$('.nav-bar-items').addClass('uncollapsed');
-		})
-		// $('.navbar').on('show.bs.collapse', function () {
-		// 	$('#navbarNav').addClass('uncollapsed');
-		// 	// $('.navbar-brand').addClass('uncollapsed');
-		// 	// $('.navbar-toggler').addClass('uncollapsed');
-		// });
-		// $('.navbar').on('hide.bs.collapse', function () {
-		// 	$('.navbar-brand').removeClass('uncollapsed');
-		// });
-		// $('.navbar').on('hidden.bs.collapse', function () {
-		// 	$('.navbar').removeClass('uncollapsed');
-		// 	$('.navbar-toggler').removeClass('uncollapsed');
-		// });
-		// $('.navbar').on('hidden.bs.collapse', function () {
-		// 	$('#navbarNav').removeClass('uncollapsed');
-		// });
-		
+		});
+		$('.navbar-hide').on('click', function() {
+			$('.nav-bar-items').removeClass('uncollapsed');
+		});		
 	</script>
 </body>
 

@@ -1,14 +1,14 @@
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   color: #46333B; }
 
 .navigation {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   font-size: 18px;
   font-weight: 300; }
 
 .navigation-small {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-weight: 300; }
 
@@ -7078,6 +7078,20 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.navigation-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px; }
+
 .nav-bar.navigation {
   padding-top: 30px; }
   @media (min-width: 768px) {
@@ -7086,7 +7100,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .nav-bar .navbar-logo {
   display: block;
-  background-image: url("../images//menu//svg/Logo-betta.svg");
+  background-image: url("../images/menu/svg/Logo-betta.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -7115,9 +7129,60 @@ a.text-dark:hover, a.text-dark:focus {
   transition: height 1s, opacity 1s, visibility 1s; }
   .nav-bar-items a {
     color: #ffffff; }
-  .nav-bar-items .main-menu-items div {
-    border-bottom: 1px solid #ffffff; }
+    .nav-bar-items a:hover {
+      color: #EE4C7C; }
   .nav-bar-items.uncollapsed {
-    height: 380px;
+    height: 550px;
     opacity: 1;
     visibility: visible; }
+    @media (min-width: 768px) {
+      .nav-bar-items.uncollapsed {
+        height: 380px; } }
+  .nav-bar-items .main-menu-items {
+    border-bottom: 1px solid #ffffff;
+    margin: 0 20px; }
+    @media (min-width: 768px) {
+      .nav-bar-items .main-menu-items {
+        margin: 0; } }
+  .nav-bar-items .small-menu-items div {
+    margin-left: 35px; }
+    @media (min-width: 768px) {
+      .nav-bar-items .small-menu-items div {
+        margin-left: 0; } }
+  .nav-bar-items .navbar-hide a {
+    display: block;
+    background-image: url("../images/menu/svg/x.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    margin-left: 20px; }
+    .nav-bar-items .navbar-hide a:hover {
+      color: #EE4C7C; }
+    @media (min-width: 768px) {
+      .nav-bar-items .navbar-hide a {
+        margin-left: 0; } }
+
+.home {
+  min-height: 150vh;
+  background-image: url("../images/home/sm/motoki-tonn.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 576px) {
+    .home {
+      background-image: url("../images/home/sm/motoki-tonn.jpg"); } }
+  @media (min-width: 768px) {
+    .home {
+      background-image: url("../images/home/md/motoki-tonn.jpg"); } }
+  @media (min-width: 992px) {
+    .home {
+      background-image: url("../images/home/lg/motoki-tonn.jpg"); } }
+  @media (min-width: 1200px) {
+    .home {
+      background-image: url("../images/home/xl/motoki-tonn.jpg"); } }
+  @media (min-width: 1920px) {
+    .home {
+      background-image: url("../images/home/xxl/motoki-tonn.jpg"); } }
