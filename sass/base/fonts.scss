@@ -1,30 +1,9 @@
 @import './base.scss';
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // font
-// $font-family: 'Oswald', sans-serif;
-$font-family: sans-serif;
-
-// font sizes
-$size-xxxl: 30px;
-$size-xxl: 20px;
-$size-xl: 20px;
-$size-l: 20px;
-$size-m: 18px;
-$size-s: 16px;
-$size-xs: 12px;
-$size-xxs: 10px;
-$size-xxxs: 10px;
-@media (min-width: 768px) {
-	$size-xxxl: 100px;
-	$size-xxl: 95px;
-	$size-xl: 60px;
-	$size-l: 50px;
-	$size-m: 45px;
-	$size-s: 35px;
-	$size-xs: 30px;
-	$size-xxs: 25px;
-	$size-xxxs: 20px;
-}
+$font-family: 'Oswald', sans-serif;
+// $font-family: sans-serif;
 
 // font weight
 $f-extra-light: 200;
@@ -34,82 +13,360 @@ $f-medium: 500;
 $f-semi-bold: 600;
 $f-bold: 700;
 
-body {
+// font sizes
+$size-xxxl: 4rem;
+$size-xxl: 3rem;
+$size-xl: 2.8rem;
+$size-l: 2.7rem;
+$size-m: 2.1rem;
+$size-s: 1.5rem;
+$size-xs: 0.8rem;
+$size-xxs: 0.6rem;
+$size-xxxs: 0.5rem;
+
+html {
 	font-family: $font-family;
 	color: $color-d-shade;
+	font-size: 12px;
+	@include media-breakpoint-up(sm) {
+		font-size: 12px;
+	}
+	@include media-breakpoint-up(md) {
+		font-size: 10px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 10px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 14px;
+	}
 }
 
-.navigation {
+.f-navigation {
 	font-family: $font-family;
 	font-size: $size-m;
 	font-weight: $f-light;
 }
 
-.navigation-small {
+.f-navigation-small {
 	font-family: $font-family;
 	font-size: $size-s;
 	font-weight: $f-light;
 }
 
-.small-heading {
+.f-navigation-social {
+	font-family: $font-family;
+	font-size: $size-l;
+	font-weight: $f-light;
+}
+
+.f-small-heading {
 	font-size: $size-l;
 	font-weight: $f-light;
 	color: $color-main;
 }
 
-.small-text {
+.f-small-text {
 	font-size: $size-xs;
 	font-weight: $f-extra-light;
 }
 
-.small-text-readm {
+.f-small-text-readm {
 	font-size: $size-m;
 	font-weight: $f-light;	
 }
 
-%big-heading {
+.f-big-heading {
 	font-size: $size-xxxl;
 	font-weight: $f-light;
 }
-.big-heading {
-	@extend %big-heading;
-}
 
-%big-text {
+.f-big-text {
 	font-size: $size-xl;
 	font-weight: $f-light;
 }
-.big-text {
-	@extend %big-text;
-}
 
-.event-heading {
+.f-event-heading {
 	font-size: $size-xxl;
 	font-weight: $f-semi-bold;
 }
 
-.event-text {
+.f-event-text {
 	font-size: $size-xs;
 	font-weight: $f-regular;
 }
 
-.event-text {
+.f-event-text {
 	font-size: $size-xs;
 	font-weight: $f-regular;
 }
 
-.collections-heading {
-	@extend %big-heading;
+.f-collections-heading {
+	font-size: $size-xxxl;
+	font-weight: $f-light;
 	color: $color-add;
 }
 
-.collections-text {
-	@extend %big-text;
+.f-collections-text {
+	font-size: $size-xl;
+	font-weight: $f-light;
 	color: $color-add;
 }
 
-.collections-links {
+.f-collections-links {
 	font-size: $size-l;
 	font-weight: $f-light;
 	color: $color-main;
 }
+
+// // font sizes
+// $size-xxxl: 30px;
+// $size-xxl: 20px;
+// $size-xl: 20px;
+// $size-l: 20px;
+// $size-m: 18px;
+// $size-s: 16px;
+// $size-xs: 12px;
+// $size-xxs: 10px;
+// $size-xxxs: 10px;
+
+// body {
+// 	font-family: $font-family;
+// 	color: $color-d-shade;
+// }
+
+// .navigation {
+// 	font-family: $font-family;
+// 	font-size: $size-m;
+// 	font-weight: $f-light;
+// }
+
+// .navigation-small {
+// 	font-family: $font-family;
+// 	font-size: $size-s;
+// 	font-weight: $f-light;
+// }
+
+// .small-heading {
+// 	font-size: $size-l;
+// 	font-weight: $f-light;
+// 	color: $color-main;
+// }
+
+// .small-text {
+// 	font-size: $size-xs;
+// 	font-weight: $f-extra-light;
+// }
+
+// .small-text-readm {
+// 	font-size: $size-m;
+// 	font-weight: $f-light;	
+// }
+
+// .big-heading {
+// 	font-size: $size-xxxl;
+// 	font-weight: $f-light;
+// }
+
+// .big-text {
+// 	font-size: $size-xl;
+// 	font-weight: $f-light;
+// }
+
+// .event-heading {
+// 	font-size: $size-xxl;
+// 	font-weight: $f-semi-bold;
+// }
+
+// .event-text {
+// 	font-size: $size-xs;
+// 	font-weight: $f-regular;
+// }
+
+// .event-text {
+// 	font-size: $size-xs;
+// 	font-weight: $f-regular;
+// }
+
+// .collections-heading {
+// 	font-size: $size-xxxl;
+// 	font-weight: $f-light;
+// 	color: $color-add;
+// }
+
+// .collections-text {
+// 	font-size: $size-xl;
+// 	font-weight: $f-light;
+// 	color: $color-add;
+// }
+
+// .collections-links {
+// 	font-size: $size-l;
+// 	font-weight: $f-light;
+// 	color: $color-main;
+// }
+
+// @include media-breakpoint-up(sm) {
+// 	$size-xxxl: 60px;
+// 	$size-xxl: 45px;
+// 	$size-xl: 35px;
+// 	$size-l: 25px;
+// 	$size-m: 20px;
+// 	$size-s: 18px;
+// 	$size-xs: 16px;
+// 	$size-xxs: 14px;
+// 	$size-xxxs: 12px;
+
+// 	.navigation {
+// 		font-family: $font-family;
+// 		font-size: $size-m;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.navigation-small {
+// 		font-family: $font-family;
+// 		font-size: $size-s;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.small-heading {
+// 		font-size: $size-l;
+// 		font-weight: $f-light;
+// 		color: $color-main;
+// 	}
+	
+// 	.small-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-extra-light;
+// 	}
+	
+// 	.small-text-readm {
+// 		font-size: $size-m;
+// 		font-weight: $f-light;	
+// 	}
+	
+// 	.big-heading {
+// 		font-size: $size-xxxl;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.big-text {
+// 		font-size: $size-xl;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.event-heading {
+// 		font-size: $size-xxl;
+// 		font-weight: $f-semi-bold;
+// 	}
+	
+// 	.event-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-regular;
+// 	}
+	
+// 	.event-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-regular;
+// 	}
+	
+// 	.collections-heading {
+// 		font-size: $size-xxxl;
+// 		font-weight: $f-light;
+// 		color: $color-add;
+// 	}
+	
+// 	.collections-text {
+// 		font-size: $size-xl;
+// 		font-weight: $f-light;
+// 		color: $color-add;
+// 	}
+	
+// 	.collections-links {
+// 		font-size: $size-l;
+// 		font-weight: $f-light;
+// 		color: $color-main;
+// 	}
+// }
+
+// @include media-breakpoint-up(lg) {
+// 	$size-xxxl: 100px;
+// 	$size-xxl: 95px;
+// 	$size-xl: 60px;
+// 	$size-l: 50px;
+// 	$size-m: 45px;
+// 	$size-s: 35px;
+// 	$size-xs: 30px;
+// 	$size-xxs: 25px;
+// 	$size-xxxs: 20px;
+// 	.navigation {
+// 		font-family: $font-family;
+// 		font-size: $size-m;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.navigation-small {
+// 		font-family: $font-family;
+// 		font-size: $size-s;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.small-heading {
+// 		font-size: $size-l;
+// 		font-weight: $f-light;
+// 		color: $color-main;
+// 	}
+	
+// 	.small-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-extra-light;
+// 	}
+	
+// 	.small-text-readm {
+// 		font-size: $size-m;
+// 		font-weight: $f-light;	
+// 	}
+	
+// 	.big-heading {
+// 		font-size: $size-xxxl;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.big-text {
+// 		font-size: $size-xl;
+// 		font-weight: $f-light;
+// 	}
+	
+// 	.event-heading {
+// 		font-size: $size-xxl;
+// 		font-weight: $f-semi-bold;
+// 	}
+	
+// 	.event-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-regular;
+// 	}
+	
+// 	.event-text {
+// 		font-size: $size-xs;
+// 		font-weight: $f-regular;
+// 	}
+	
+// 	.collections-heading {
+// 		font-size: $size-xxxl;
+// 		font-weight: $f-light;
+// 		color: $color-add;
+// 	}
+	
+// 	.collections-text {
+// 		font-size: $size-xl;
+// 		font-weight: $f-light;
+// 		color: $color-add;
+// 	}
+	
+// 	.collections-links {
+// 		font-size: $size-l;
+// 		font-weight: $f-light;
+// 		color: $color-main;
+// 	}
+// }

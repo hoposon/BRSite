@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
@@ -15,9 +15,66 @@
 <body>
 
 	<div class='container-fluid'>
-		<div id="navigation-bar" class="navigation-bar row">
+		<div id="navigation-bar" class="navigation-bar row justify-content-start f-navigation">
+			<div class="col-5 offset-1 col-sm-5 offset-sm-1">
+				<a class="navbar-logo" href="#home"></a>
+			</div>
+			<div class="col-5 col-sm-5 d-flex justify-content-end align-items-center">
+				<a class="navbar-show" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Menu</a>
+			</div>
+			<div class="nav-bar-items row  w-100 justify-content-center align-items-center">
+				<div class="nav-bar-items-container row">
+					<div class="main-menu-items row justify-content-center pb-3 w-100">
+						<div class="col-10 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#home">Home</a>
+						</div>
+						<div class="navbar-hide col-2 d-md-none align-self-center f-navigation">
+							<a class="nav-link" href="#"></a>
+						</div>
+						<div class="col-12 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#">News</a>
+						</div>
+						<div class="col-12 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#">Collections</a>
+						</div>
+						<div class="col-12 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#">Events</a>
+						</div>
+						<div class="col-12 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#">Boutique</a>
+						</div>
+						<div class="col-12 col-md-auto flex-grow-1 f-navigation">
+							<a class="nav-link" href="#">Contacts</a>
+						</div>
+					</div>
+					<div class="small-menu-items row pt-3 w-100 f-navigation-small">
+						<div class="col-12">
+							<a class="nav-link" href="#home">Home</a>
+						</div>
+						<div class="col-12">
+							<a class="nav-link" href="#">News</a>
+						</div>
+						<div class="col-12">
+							<a class="nav-link" href="#">Collections</a>
+						</div>
+					</div>
+					<div class="social-menu-items row w-100 align-items-center f-navigation-social">
+						<div>
+							<a class="nav-link" href="#home"><i class="fa fa-instagram"></i></a>
+						</div>
+						<div>
+							<a class="nav-link" href="#"><i class="fa fa-facebook-square"></i></a>
+						</div>
+						<div class="navbar-hide d-none d-md-flex flex-grow-1 justify-content-end">
+							<a class="nav-link" href="#"></a>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+		<!-- <div id="navigation-bar" class="navigation-bar row">
 			<div class="col-12">
-				<div class="nav-bar row justify-content-start navigation">
+				<div class="navbar-main row justify-content-start navigation">
 					<div class="col-5 offset-1 col-sm-5 offset-sm-1">
 						<a class="navbar-logo" href="#home"></a>
 					</div>
@@ -74,8 +131,8 @@
 						</div>
 					</div>
 				</div>
-			</div> <!-- nav-bar-items -->
-		</div> <!-- navigation-bar -->
+			</div> 
+		</div> -->
 		<div id="home" class="home row">
 		</div>
 	</div>
