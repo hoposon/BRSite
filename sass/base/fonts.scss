@@ -2,8 +2,8 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // font
-// $font-family: 'Oswald', sans-serif;
-$font-family: sans-serif;
+$font-family: 'Oswald', sans-serif;
+// $font-family: sans-serif;
 
 // font weight
 $f-extra-light: 200;
@@ -76,6 +76,10 @@ html {
 	font-size: $size-m;
 	font-weight: $f-light;
 	color: $color-d-shade;
+	&:hover {
+		color: $color-add;
+		text-decoration: none;
+	}
 }
 
 .f-big-heading {

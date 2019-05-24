@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
@@ -75,19 +75,37 @@
 		<div id="home" class="home row">
 		</div>
 		<div id="designer" class="designer small-section row">
-			<div class="designer-heading col-12 col-md-2 d-flex align-items-center f-small-heading">
-				Designer
-			</div>
-			<div class="col-12 col-md-8 d-flex flex-column justify-content-center f-small-text">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam erat volutpat. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur bibendum justo non orci. Mauris elementum mauris vitae tortor. Proin mattis lacinia justo. Praesent dapibus.
-				<div class="row justify-content-end">
-					<a id='readMoreDesigner' class="f-small-text-readm" href="#">Read more</a>
+			<div class="text row">
+				<div class="designer-heading col-12 col-md-1 offset-md-2 d-flex justify-content-end align-items-center f-small-heading">
+					Designer
+				</div>
+				<div class="col-12 col-md-6 text-justify d-flex flex-column justify-content-center f-small-text">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. 
+					Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam erat volutpat. 
+					Nullam sapien sem, ornare ac, nonummy non, lobor<span id="designer-dots">&nbsp;...</span><span id="designer-more" class="more">tis a enim. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. 
+					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur bibendum justo non orci. 
+					Mauris elementum mauris vitae tortor. Proin mattis lacinia justo. Praesent dapibus.</span>
+					<div class="row justify-content-end">
+						<button id='readMore-Designer' class="read-more-btn f-small-text-readm" onclick="readMoreLess(event)" href="#">Read more</button>
+					</div>
+				</div>
+				<div class="col-12 col-md-2 d-flex align-items-center socials">
+					<a class="mr-3" href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-facebook-square"></i></a>
 				</div>
 			</div>
-			<div class="col-12 col-md-2 d-flex align-items-center socials">
-				<a class="mr-3" href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-facebook-square"></i></a>
+			<div class="row">
+				<div class="photo col-12">
+					<picture>
+						<source media="(min-width: 1920px)" srcset="/images/designer/xxl/designer.jpg">
+						<source media="(min-width: 1200px)" srcset="/images/designer/xl/designer.jpg">
+						<source media="(min-width: 992px)" srcset="/images/designer/lg/designer.jpg">
+						<source media="(min-width: 768px)" srcset="/images/designer/md/designer.jpg">
+						<img src="/images/designer/sm/designer.jpg" class="img-fluid" alt="Flowers">
+						</picture>
+				</div>
 			</div>
+			
 		</div>
 	</div>
 	
@@ -104,7 +122,26 @@
 		});
 		$('.navbar-hide').on('click', function() {
 			$('.nav-bar-items').removeClass('uncollapsed');
-		});		
+		});
+
+		function readMoreLess(event) {
+			var target = event.target.id.split('-')[1].toLowerCase();
+			var dots = document.getElementById(target+"-dots");
+			var moreText = document.getElementById(target+"-more");
+			var btnText = document.getElementById(event.target.id);
+
+			$('#'+target+'-dots').toggleClass('dots-collapse');
+			$('#'+target+'-more').toggleClass('more-uncollapse');
+			// if (dots.style.display === "none") {
+			// 	dots.style.display = "inline";
+			// 	btnText.innerHTML = "Read more"; 
+			// 	moreText.style.display = "none";
+			// } else {
+			// 	dots.style.display = "none";
+			// 	btnText.innerHTML = "Read less"; 
+    		// 	moreText.style.display = "inline";
+  			// }
+		}
 	</script>
 </body>
 
