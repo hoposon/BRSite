@@ -69,7 +69,7 @@
 		}
 		@include media-breakpoint-up(xl) {
 			width: 300px;
-			height: 150px;
+			// height: 150px;
 		}
 	}
 	.navbar-show.navigation {
@@ -194,6 +194,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	// Small devices (landscape phones, 576px and up)
 	@include media-breakpoint-up(sm) {
 		background-image: url('../images/home/sm/motoki-tonn.jpg');
@@ -212,5 +213,19 @@
 	}
 	@media (min-width: 1920px) {
 		background-image: url('../images/home/xxl/motoki-tonn.jpg');
+	}
+}
+
+.small-section {
+	min-height: 30vh;
+	padding: 10rem 0;
+	.designer-heading {
+		border-right: 1px solid $color-main;
+	}
+	.socials {
+		a {
+			color: $color-add;
+			font-size: $size-xxxl;
+		}
 	}
 }

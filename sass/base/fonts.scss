@@ -2,8 +2,8 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // font
-$font-family: 'Oswald', sans-serif;
-// $font-family: sans-serif;
+// $font-family: 'Oswald', sans-serif;
+$font-family: sans-serif;
 
 // font weight
 $f-extra-light: 200;
@@ -20,7 +20,7 @@ $size-xl: 2.8rem;
 $size-l: 2.7rem;
 $size-m: 2.1rem;
 $size-s: 1.5rem;
-$size-xs: 0.8rem;
+$size-xs: 1.2rem;
 $size-xxs: 0.6rem;
 $size-xxxs: 0.5rem;
 
@@ -67,13 +67,15 @@ html {
 }
 
 .f-small-text {
-	font-size: $size-xs;
+	font-size: $size-s;
 	font-weight: $f-extra-light;
+	color: $color-d-shade;
 }
 
 .f-small-text-readm {
 	font-size: $size-m;
-	font-weight: $f-light;	
+	font-weight: $f-light;
+	color: $color-d-shade;
 }
 
 .f-big-heading {
