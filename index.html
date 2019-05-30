@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> -->
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css">
@@ -74,19 +74,21 @@
 		</div>
 		<div id="home" class="home row">
 		</div>
-		<div id="designer" class="designer small-section row">
+		<div id="designer" class="designer small-section row pb-5">
 			<div class="text row">
 				<div class="designer-heading col-12 col-md-1 offset-md-2 d-flex justify-content-end align-items-center f-small-heading">
 					Designer
 				</div>
-				<div class="col-12 col-md-6 text-justify d-flex flex-column justify-content-center f-small-text">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. 
-					Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam erat volutpat. 
-					Nullam sapien sem, ornare ac, nonummy non, lobor<span id="designer-dots">&nbsp;...</span><span id="designer-more" class="more">tis a enim. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. 
-					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur bibendum justo non orci. 
-					Mauris elementum mauris vitae tortor. Proin mattis lacinia justo. Praesent dapibus.</span>
-					<div class="row justify-content-end">
-						<button id='readMore-Designer' class="read-more-btn f-small-text-readm" onclick="readMoreLess(event)" href="#">Read more</button>
+				<div class="col-12 col-md-6 separator">
+					<div id="designer-text" class="col-12 text-justify f-small-text no-padding-x read-more collapsed-more">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. 
+						Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam erat volutpat. 
+						Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur bibendum justo non orci. 
+						Mauris elementum mauris vitae tortor. Proin mattis lacinia justo. Praesent dapibus.
+					</div>
+					<div class="col-12 d-flex justify-content-end no-padding-x">
+						<button id='designer-btn' class="read-more-btn f-small-text-readm" onclick="readMoreLess('designer-btn', 'designer-text')" href="#">Read more</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-2 d-flex align-items-center socials">
@@ -105,7 +107,28 @@
 						</picture>
 				</div>
 			</div>
-			
+		</div>
+		<div id="news" class="news row">
+			<div class="big-section row">
+				<div class="text row align-items-center">
+					<!-- <div class="col-12 col-md-6 separator"> -->
+						<!-- <div id="designer-text" class="col-12 text-justify f-small-text no-padding-x read-more collapsed-more"> -->
+					<div class="col-12 col-md-8 offset-md-1 text-right f-big-text separator">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. 
+							Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam erat volutpat. 
+							Nullam sapien sem, ornare ac, nonummy non, lobortis a enim.
+						<!-- </div> -->
+					</div>
+					<!-- <div class="heading col-12 col-md-1 offset-md-2 d-flex justify-content-start align-items-center f-small-heading"> -->
+					<div class="heading col-12 col-md-2 f-big-heading">
+						News
+					</div>
+				</div>
+			</div>
+			<div class="news-section row">
+
+			</div>
+
 		</div>
 	</div>
 	
@@ -124,24 +147,24 @@
 			$('.nav-bar-items').removeClass('uncollapsed');
 		});
 
-		function readMoreLess(event) {
-			var target = event.target.id.split('-')[1].toLowerCase();
-			var dots = document.getElementById(target+"-dots");
-			var moreText = document.getElementById(target+"-more");
-			var btnText = document.getElementById(event.target.id);
-
-			$('#'+target+'-dots').toggleClass('dots-collapse');
-			$('#'+target+'-more').toggleClass('more-uncollapse');
-			// if (dots.style.display === "none") {
-			// 	dots.style.display = "inline";
-			// 	btnText.innerHTML = "Read more"; 
-			// 	moreText.style.display = "none";
-			// } else {
-			// 	dots.style.display = "none";
-			// 	btnText.innerHTML = "Read less"; 
-    		// 	moreText.style.display = "inline";
-  			// }
+		var readMoreHeights = {};
+		function readMoreLess(btnId, textId) {
+			var target = btnId.split('-')[0].toLowerCase();
+			if (document.querySelector('#'+target+'-text').classList.contains('collapsed-more')) {
+				readMoreHeights['#'+target+'-text'] = $('#'+target+'-text').height();
+				$('#'+target+'-text').css({'height': $('#'+target+'-text')[0].scrollHeight + 'px'});
+				document.getElementById(btnId).innerHTML = 'Read less';
+			} else {
+				// $('#'+target+'-text').css({'height': 50 + 'px'});
+				$('#'+target+'-text').css('height', readMoreHeights['#'+target+'-text']);
+				document.getElementById(btnId).innerHTML = 'Read more';
+			}
+			$('#'+target+'-text').toggleClass('collapsed-more');
 		}
+
+		(function loadNews(){
+			window.fetch('http://localhost:3000/content/news/news.json').then(function(response) {response.json().then(function(data) {console.log(data)})})
+		})()
 	</script>
 </body>
 

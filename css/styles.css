@@ -7021,7 +7021,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   color: #46333B;
   font-size: 12px; }
   @media (min-width: 576px) {
@@ -7038,17 +7038,17 @@ html {
       font-size: 14px; } }
 
 .f-navigation {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   font-size: 2.1rem;
   font-weight: 300; }
 
 .f-navigation-small {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   font-size: 1.5rem;
   font-weight: 300; }
 
 .f-navigation-social {
-  font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
   font-size: 2.7rem;
   font-weight: 300; }
 
@@ -7072,7 +7072,8 @@ html {
 
 .f-big-heading {
   font-size: 4rem;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #9A1750; }
 
 .f-big-text {
   font-size: 2.8rem;
@@ -7113,30 +7114,9 @@ html {
   margin-left: 0px;
   margin-right: 0px; }
 
-.read-more-btn {
-  height: unset;
-  width: unset;
-  background-color: unset;
-  margin: 0;
-  padding: 0;
-  border: none; }
-  .read-more-btn:focus {
-    outline: 0; }
-
-.dots-collapse {
-  display: none; }
-
-.more {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 1s, opacity 1s;
-  /* For Safari 3.1 to 6.0 */
-  transition: height 1s, opacity 1s; }
-
-.more-uncollapse {
-  opacity: 1;
-  height: 150px; }
+.no-padding-x {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .navigation-bar {
   position: absolute;
@@ -7265,7 +7245,8 @@ html {
   background-image: url("../images/home/sm/motoki-tonn.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   @media (min-width: 768px) {
     .home {
       background-image: url("../images/home/md/motoki-tonn.jpg"); } }
@@ -7279,16 +7260,55 @@ html {
     .home {
       background-image: url("../images/home/xxl/motoki-tonn.jpg"); } }
 
+.read-more-btn {
+  height: unset;
+  width: unset;
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+  border: none; }
+  .read-more-btn:focus {
+    outline: 0; }
+
+.read-more {
+  overflow: hidden;
+  -webkit-transition: height 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: height 1s; }
+
+.collapsed-more {
+  height: 50px; }
+  @media (min-width: 768px) {
+    .collapsed-more {
+      height: 66px; } }
+
 .small-section {
   min-height: 30vh; }
   .small-section .text {
     padding: 10rem 0; }
-    .small-section .text .designer-heading {
-      border-right: 1px solid #9A1750; }
     .small-section .text .socials a {
       color: #EE4C7C;
       font-size: 4rem; }
-    .small-section .text .f-small-text {
-      border: 1px solid red; }
   .small-section .photo {
     padding: 0 150px; }
+  .small-section .separator {
+    border-top: 1px solid #9A1750; }
+    @media (min-width: 768px) {
+      .small-section .separator {
+        border-left: 1px solid #9A1750;
+        border-top: none; } }
+
+.big-section .text {
+  padding: 10rem 0; }
+
+.big-section .separator {
+  border-top: 1px solid #9A1750; }
+  @media (min-width: 768px) {
+    .big-section .separator {
+      border-right: 1px solid #9A1750;
+      border-top: none; } }
+
+.news {
+  background-color: #F2E8ED; }
+  .news .news-section {
+    background-color: #9A1750; }

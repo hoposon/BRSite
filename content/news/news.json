@@ -1,0 +1,19 @@
+{
+	"arr": [
+		{
+			"heading" : "Come and get a free makeup",
+			"text" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed",
+			"image": "news_1.jpg"
+		},
+		{
+			"heading" : "Come and get a free makeup",
+			"text" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed",
+			"image": "news_1.jpg"
+		},
+		{
+			"heading" : "Come and get a free makeup",
+			"text" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Aenean vel massa quis mauris vehicula lacinia. Aliquam ornare wisi eu metus. Nam quis nulla. Mauris dolor felis, sagittis at, luctus sed",
+			"image": "news_1.jpg"
+		}
+	]
+}

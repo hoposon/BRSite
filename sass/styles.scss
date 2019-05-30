@@ -29,34 +29,9 @@
 	margin-right: 0px;
 }
 
-.read-more-btn {
-	height: unset;
-	width: unset;
-	background-color: unset;
-	margin: 0;
-	padding: 0;
-	border: none;
-	&:focus {outline:0;}
-}
-.dots-collapse {
-	display: none;
-}
-.more {
-	opacity: 0;
-	height: 0;
-	overflow: hidden;
-	// visibility: hidden;
-	// -webkit-transition: height 1s, opacity 1s, visibility 0s; /* For Safari 3.1 to 6.0 */
-	// transition: height 1s, opacity 1s, visibility 0s;
-	// -webkit-transition: opacity 1s, visibility 1s; /* For Safari 3.1 to 6.0 */
-	// transition: opacity 1s, visibility 1s;
-	-webkit-transition: height 1s, opacity 1s; /* For Safari 3.1 to 6.0 */
-	transition: height 1s, opacity 1s;
-}
-.more-uncollapse {
-	// visibility: visible;
-	opacity: 1;
-	height: 150px;
+.no-padding-x {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .navigation-bar {
@@ -224,7 +199,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	// background-attachment: fixed;
+	background-attachment: fixed;
 	// Small devices (landscape phones, 576px and up) - same picture as smallest displays
 	// Medium devices (tablets, 768px and up)
 	@include media-breakpoint-up(md) {
@@ -243,26 +218,75 @@
 	}
 }
 
+
+.read-more-btn {
+	height: unset;
+	width: unset;
+	background-color: unset;
+	margin: 0;
+	padding: 0;
+	border: none;
+	&:focus {outline:0;}
+}
+
+.read-more {
+	// height: 50px;
+	overflow: hidden;
+	-webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
+	transition: height 1s;
+	// @include media-breakpoint-up(md) {
+	// 	height: 66px;
+	// }
+}
+.collapsed-more {
+	height: 50px;
+	@include media-breakpoint-up(md) {
+		height: 66px;
+	}
+}
+
 .small-section {
 	min-height: 30vh;
 	
 	.text {
 		padding: 10rem 0;
-		.designer-heading {
-			border-right: 1px solid $color-main;
-		}
 		.socials {
 			a {
 				color: $color-add;
 				font-size: $size-xxxl;
 			}
 		}
-		.f-small-text {
-			border: 1px solid red;
-		}
 	}
-	
 	.photo {
 		padding: 0 150px
+	}
+	.separator {
+		border-top: 1px solid $color-main;
+		// border-left: none;
+		@include media-breakpoint-up(md) {
+			border-left: 1px solid $color-main;
+			border-top: none;
+		}
+	}
+}
+
+.big-section {
+	.text {
+		padding: 10rem 0;
+	}
+	.separator {
+		border-top: 1px solid $color-main;
+		// border-left: none;
+		@include media-breakpoint-up(md) {
+			border-right: 1px solid $color-main;
+			border-top: none;
+		}
+	}
+}
+
+.news {
+	background-color: $color-l-shade;
+	.news-section {
+		background-color: $color-main;
 	}
 }
